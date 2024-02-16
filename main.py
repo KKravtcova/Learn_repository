@@ -1664,7 +1664,7 @@ from random import randint
 # for i in new_shape:
 #     print("Количество", i, "=", int(check_shape.count(i)))
 
-print("Вносим изменения")
+# print("Вносим изменения")
 
 
 
