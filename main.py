@@ -990,7 +990,7 @@
 
 # Генерация случайных данных
 
-import random
+# import random
 
 # print(random.random())
 # print(random.randint(3, 9))  # (3, 9) - от 3 по 9 (включительно)
@@ -1032,7 +1032,7 @@ import random
 # s = [55, 66, 77, 88, 99, 9, 8, 7, 6, 5, 4, 3, 21, 1]
 # print(sum(s))
 
-import random
+# import random
 
 # mas = [i for i in range(10)]
 # print(mas)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -1156,7 +1156,7 @@ import random
 #         print(x, end="\t")
 #     print()
 
-import random
+# import random
 
 # w, h = 4, 3
 # matrix = [[random.randint(1, 30) for x in range(w)]for y in range(h)]
@@ -1526,7 +1526,7 @@ import random
 # print(a[1:3])  # (2, 3)
 # # a[1] = 3  # не работает  TypeError
 
-from random import randint
+# from random import randint
 
 # s = tuple(int(input("-> ")) for i in range(5))
 # s = tuple(randint(0, 100) for i in range(5))
@@ -1666,5 +1666,6 @@ from random import randint
 
 # print("Вносим изменения")
 
+# print('Склонированный репозиторий')
 
-
+# Множества
