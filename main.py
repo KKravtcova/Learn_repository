@@ -407,11 +407,11 @@
 # print('*' * n)
 # print("*\n" * n)
 
-# a = int(input('Введите начало диапазона: '))
-# b = int(input('Введите конец диапазона: '))
+# a = int(input('Введите начало диапазона:'))
+# b = int(input('Введите конец диапазона:'))
 # res = 0
-# while a <= b:  # 5 6 7 8 9 10
-#     if a % 2:  # a % 2 != 0
+# while a <= b: # 5 6 7 8 9 10
+#     if a % 2: # a % 2 != 0
 #         res += a
 #     a += 1
 # print(res)  # 21
@@ -1666,6 +1666,703 @@
 
 # print("Вносим изменения")
 
-# print('Склонированный репозиторий')
+# print('Склонированый репозиторий')
 
-# Множества
+
+# Множества (set)
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# print(len(s))
+
+# a = set("hello")
+# print(a, type(a))
+
+# c = ('red', 'blue', 'green', 'red')
+# a = set(c)
+# print(a, type(a))
+
+# mas = [1, 2, 3, 4, 5]
+# s = {x for x in mas if x % 2 == 0}
+# print(s)
+
+# def to_set(st):
+#     c = set(st)
+#     return c, len(c)
+#
+#
+# print(to_set('Я обычная строка'))
+# print(to_set([1, 8, 3, 4, 8, 8, 9, 2]))
+
+# t = {"red", "green", "blue"}
+# # print("green" not in t)
+# for i in t:
+#     print(i)
+
+# r = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
+# # a = [i for i in r if 'a' not in i]
+# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r if i[1] == 'c']
+# print(a)
+
+# a = {"Tom", "Bob", "Alice"}
+# print(a)
+# a.add("Ann")
+# print(a)
+# a.remove("Ann")  # при обращении к несуществующему элементу - ошибка KeyError
+# print(a)
+# user = "Ann"
+# if user in a:
+#     a.remove(user)
+# print(a)
+# a.discard("Ann")  # удаляет элемент
+# print(a)
+# n = a.pop()  # удаляет первый элемент
+# print(n)
+# a.clear()  # очищает множество
+# print(a)
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# c = a.union(b)  # объединяет множества
+# c = a | b # объединяет множества
+# print(c)
+# a |= b  # объединяет множества
+# print(a)
+# c = a & b  # возвращает одинаковые элементы из первого и второго множеств
+# print(c)
+# a &= b  # возвращает одинаковые элементы из первого и второго множеств
+# print(a)
+# a -= b  # возвращает уникальный элемент из первого множества
+# print(a)
+# c = a - b  # возвращает уникальный элемент из первого множества
+# print(c)
+# c = a ^ b  # возвращает уникальные элементы из первого и второго множества
+# print(c)
+# a ^= b  # возвращает уникальные элементы из первого и второго множества
+# print(a)
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+# # s = s1.union(s2, s3, s4, s5, s6, s7)
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7
+# print(s)
+# count = len(s)
+# print("Count:", count)
+# print("Min:", min(s))
+# print("Max:", max(s))
+# print("Sum:", sum(s))
+
+# s1 = "Hello"
+# s2 = "How are you"
+# a = set(s1) & set(s2)
+# print(a)
+# for i in a:
+#     print(i, end=" ")
+
+# drawing = {"Marina", "Jenya", "Sveta"}
+# music = {'Kostya', 'Jenya', 'Ilya'}
+# one = drawing ^ music
+# print("Only one hobby:", one)
+# both = drawing & music
+# print("Both hobbies:", both)
+# drawing -= both
+# print("Drawing hobbies:", drawing)
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+# print(a <= b)
+# print(a >= b)
+
+
+#  Тип frozenset (неизменяемый сет)
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# print(type(s))
+# a = frozenset({"Hello", "World"})
+# print(a)
+
+# HomeWork
+# a = {"а", "е", "о", "ю", "у", "ы", "и", "э", "я", "ё"}
+# b = input("Введите строку: ")
+# count = 0
+# for i in b:
+#     if i.lower() in a:
+#         count += 1
+# print("Количество гласных равно:", count)
+
+# a = {"а", "е", "о", "ю", "у", "ы", "и", "э", "я", "ё"}
+# b = input("Введите строку: ")
+# s = [i for i in b if i.lower() in a]
+# print("Количество гласных равно:", len(s))
+
+
+# a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 0, 0]
+# print(a)
+# b = set(a)
+# print(b)
+# a = list(b)
+# print(a)
+
+
+# Словарь  # ключом могут быть только неизменяемые типы данных
+
+# lst = [1, 2, 3]
+# d = {'one': 1, 'two': 2, 'three': 3, 4: 'four'}
+# lst[0] = 10
+# print(lst[0])
+# print(d['one'])
+# d['one'] = 10
+# print(d['one'])
+# print(d[4])
+
+# d = {}  # создаем словарь
+# print(d)
+# print(type(d))
+#
+# d1 = dict()  # создаем словарь
+# print(d1)
+# print(type(d1))
+
+# d = {'one': 1, 'two': 2}
+# print(d)
+# print(type(d))
+
+# d1 = dict(one=1, two=2, four='four')
+# print(d1)
+# print(type(d1))
+
+# d = {0: 1, 'two': 2, (1, 2.3): "кортеж", True: [2, 3, 6, 7], 1: 45, False: (1, 2)}
+# print(d)
+
+# d = {0: 1, 'two': 2, (1, 2.3): "кортеж", True: [2, 3, 6, 7]}
+# print(d)
+# print(d[True][1])
+# print(d[(1, 2.3)])
+# print(d['two'])
+# print(d[0])
+
+# lst = (('one', 1), ('two', 2), ('tree', 3))
+# d = dict(lst)
+# print(d)
+
+# d = {a: a ** 2 for a in range(7)}
+# print(d)
+
+# d = {'one': 1, 'two': 2, 'four': 4}
+# print('one' in d)
+#
+# key = "four1"
+# # if key in d:
+# #     del d[key]
+#
+# try:
+#     del d[key]
+# except KeyError:
+#     print("Элемента с ключом " + key + " нет в словаре")
+#
+# for i in d:
+#     print(i, "->", d[i])
+
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(d)
+# s = 1
+# for i in d:
+#     s *= d[i]
+# print(s)
+
+# d = dict()
+# d[1] = input("-> ")
+# d[2] = input("-> ")
+# d[3] = input("-> ")
+# d[4] = input("-> ")
+# print(d)
+
+# d = {i: input("-> ") for i in range(1, 5)}
+# print(d)
+# dislike = int(input("Какой элемент исключить: "))
+# if dislike in d:
+#     del d[dislike]
+# print(d)
+
+# my_dict = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(len(my_dict))
+# print(min(my_dict))
+
+# my_dict = {3: 'x1', 7: 'x2', 5: 'x3', -1: 'x4'}
+# print(sum(my_dict))
+
+
+# goods = {
+#     '1': ['Core-i3-4330', 9, 4500],
+#     '2': ['Core-i5-4670K', 3, 8500],
+#     '3': ['AMD FX-6300', 6, 3700],
+#     '4': ['Pentium G3220', 8, 2100],
+#     '5': ['Core-i5-3450', 5, 6400]
+# }
+# for i in goods:
+#     print(i, ") ", goods[i][0], " - ", int(goods[i][1]), " шт. по ", goods[i][2], "руб", sep="")
+# while True:
+#     n = input('№: ')
+#     if n != '0':
+#         qty = int(input('Количество: '))
+#         try:
+#             goods[n][1] += qty
+#         except KeyError:
+#             pass
+#     else:
+#         break
+# for i in goods:
+#     print(i, ") ", goods[i][0], " - ", int(goods[i][1]), " шт. по ", goods[i][2], "руб", sep="")
+
+# или условие проверки может быть другое:
+# while True:
+#     n = input('№: ')
+#     if n != '0':
+#         if n in goods:
+#             qty = int(input('Количество: '))
+#             goods[n][1] += qty
+#         else:
+#             print('Некорректный номер товара!')
+#     else:
+#         break
+
+
+# Методы работы со словарями
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# print(d.keys())  # список ключей
+# print(d.values())  # список значений
+# print(d.items())  # список ключей и значений в виде кортежа
+
+# for i in d.values():
+#     print(i, end=" ")
+
+# for i, j in d.items():
+#     print(i, '->', j)
+
+# print(list(d.items()))
+# print(tuple(d.items()))
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# d2 = d.copy()
+# print('d:', d, id(d))
+# print('d2', d2, id(d2))
+#
+# d2['a'] = 5
+# d['e'] = 7
+# print('d:', d, id(d))
+# print('d2', d2, id(d2))
+#
+# d.clear()  # очищает словарь, при этом ячейка хранения остается, но пустой
+# print('d:', d, id(d))
+# print('d2', d2, id(d2))
+
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# print(d['b'])
+# value = d.get('b')
+# print(value)
+# value1 = d.get('e', "Такого ключа не существует")
+# print(value1)
+# value2 = d.get('b', "Такого ключа не существует")
+# print(value2)
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# item = d.pop('a', "Такого ключа не существует")  # удаляет ключ и значение первого элемента
+# print(item)
+# print(d)
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# item = d.popitem()  # удаляет ключ и значение последнего элемента
+# print(item)
+# print(d)
+
+# HomeWork
+# work_dict = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# print(work_dict)
+# work = list(work_dict.items())
+# dict_old = (work[1], work[3])
+# print(dict(dict_old))
+# dict_new = (work[0], work[2])
+# print(dict(dict_new))
+
+# или
+# data = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# num = 'name'
+# new_salary = 'salary'
+# dictionary = {num: data.pop(num), new_salary: data.pop(new_salary)}
+# print(data)
+# print(dictionary)
+
+
+# d = {'a': 1, 'c': 3, 'b': 2}
+# d1 = {'r': 7, 'q': 40}
+# d.update(d1)  # объединили два словаря (обновляет существующий словарь)
+# print(d)
+
+# d = {'a': 1, 'c': 3, 'b': 2}
+# d1 = {'r': 7, 'q': 40}
+# d.update(d1)
+# d2 = [('a', 20), ('b', 9)]  # список в виде кортежа преобразуется в словарь
+# d.update(d2)
+# print(d)
+
+
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# z = x.copy()
+# z.update(y)
+# print(z)
+
+# или
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# z = x | y  # объединяем в один новый словарь
+# print(z)
+
+# a = {'first': {1: 'one', 2: 'two', 3: 'three'}, 'second': {4: 'four', 5: 'five'}}
+# print(a)
+# for x in a:
+#     print(x)
+#     for y in a[x]:
+#         print('\t', y, ': ', a[x][y], sep='')
+
+
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# c = a + b
+# d = a.__add__(b)
+# print(c)
+# print(d)
+
+
+# sales = {"John": {'N': 3056, 'S': 8463, 'E': 8441, 'W': 2694},
+#          "Nom": {'N': 4832, 'S': 6786, 'E': 4737, 'W': 3612},
+#          "Anne": {'N': 5239, 'S': 4392, 'E': 5820, 'W': 1859},
+#          "Fiona": {'N': 3984, 'S': 3645, 'E': 8821, 'W': 2451}
+#          }
+# for x in sales:
+#     print(x)
+#     for y in sales[x]:
+#         print('\t', y, ': ', sales[x][y], sep='')
+# person = input('Имя: ')
+# region = input('Регион: ')
+# print(sales[person][region])
+# new_data = int(input('Новое значение: '))
+# sales[person][region] = new_data
+# print(sales[person])
+
+
+# d = {'N': 3056, 'S': 8463, 'E': 8441, 'W': 2694}
+# # new_d = {key: value for key, value in d.items()}
+# d = {value: key for key, value in d.items()}  # новый словарь, ключи и значения поменяли местами
+# print(d)
+#
+# d = {'N': 3056, 'S': 8463, 'E': 8441, 'W': 2694}
+# d.update({value: key for key, value in d.items()}) # старый словарь, ключи и значения поменяли местами
+# print(d)
+
+
+# d = {'E': 3, 'N': 1, 'S': 2, 'W': 4}  # {'N': 1, 'S': 2}
+# new_d = {k: v for k, v in d.items() if v <= 2}  # привязалось к значению, а не к ключу
+# print(new_d)
+
+# for key, value in list(d.items())[1:3]:
+#     print(f'{key}: {value}', end=' ')
+
+# d = {'E': 3, 'N': 1, 'S': 2, 'W': 4}
+# value = list(d.items())
+# print(value)
+
+
+# a = ['one', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
+# d = dict()
+# current_key = ''
+# for item in a:
+#     if type(item) is str:
+#         d[item] = []
+#         current_key = item
+#     else:
+#         d[current_key].append(item)
+# print(d)
+
+
+# d = dict([(1, 'one'), (2, 'two'), (3, 'three')])
+# d = dict(zip([1, 2, 3, 4, 5], ['one', 'two', 'three']))  # объединяет списки
+# print(d)
+#
+# a = [1, 2, 3]
+# b = ['one', 'two', 'three']
+# f = {k: v for k, v in zip(a, b)}
+# print(f)
+
+# a = [1, 2, 3]
+# b = ['one', 'two', 'three']
+# d = [4.5, 7.4, 9.6]
+# # c = dict(zip(a, b))
+# # c = tuple(zip(a, b))
+# # c = list(zip(a, b))
+# # c = set(zip(a, b))
+# # c = list(zip(a, ))
+# c = list(zip(a, b, d))
+# print(c)
+
+
+# d_one = {'name': "Igor", 'last_name': "Petrov", 'job': "Consultant"}
+# d_two = {'name': "Irina", 'last_name': "Irisova", 'job': "Manager"}
+# for (k1, v1), (k2, v2) in zip(d_one.items(), d_two.items()):
+#     print(k1, "->", v1)
+#     print(k2, "->", v2)
+
+
+# d = ([(1, 'one'), (2, 'two'), (3, 'three')])
+# a, b = zip(*d)  # распаковка кортежа
+# print(a)
+# print(b)
+
+# a = ['two', 'one', 'three']
+# b = [3, 2, 1]
+# d = dict(zip(a, b))
+# print(d)
+# s = sorted(d.items())  # sorted работает с любыми типами данных
+# print(s)
+# print(dict(s))
+
+
+# a = ['two', 'one', 'three']
+# b = [3, 2, 1]
+# d = list(zip(a, b))
+# print(d)
+# d.sort()
+# print(d)
+# print(dict(d))
+
+# one = {'apple': 0.45, 'orange': 0.35, 'pepper': 0.7}
+# two = {'pepper': 0.2, 'onion': 0.55}
+# # print({**one, **two})  # {'apple': 0.45, 'orange': 0.35, 'pepper': 0.2, 'onion': 0.55}
+# # print({**two, **one})  # распаковали ключи и значения в словарь
+# for k, v in {**two, **one}.items():
+#     print(k, v)
+
+
+# data = ['red', 'green', 'blue']
+# num = 1
+# for val in data:
+#     print(num, ") ", val, sep="")
+#     num += 1
+# # или
+# print()  # пустая строка
+# for num, val in enumerate(data, 1):  # enumerate - готовая функция для нумерации
+#     print(num, ") ", val, sep="")
+
+
+# HomeWork
+# month = ['January', 'February', 'March']
+# total_sales = [52000, 51000, 48000]
+# production_cost = [46800, 45900, 43200]
+# for sales, costs, m in zip(total_sales, production_cost, month):
+#     profit = sales - costs
+#     print('Чистая прибыль в ', m, ' = ', profit)
+
+
+# a = [1, 2, 3]
+# b = [*a, 4, 5, 6]
+# print(b)
+
+# def func(*args):
+#     return args
+#
+#
+# print(func(2))
+# print(func(2, 3, 4, 'abc'))
+# print(func())
+
+
+# def summa(*params):
+#     res = 0
+#     for i in params:
+#         res += i
+#     return res
+#
+#
+# print(summa(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(summa(3, 4, 5))
+
+
+# def to_dict(*num):
+#     return dict(zip(num, num))
+#
+#
+# print(to_dict(1, 2, 3, 5))
+# print(to_dict('gray', (2, 17), 3.11, -4))
+# или
+
+# def to_dict(*num):
+#     return {element: element for element in num}
+#
+#
+# print(to_dict(1, 2, 3, 5))
+# print(to_dict('gray', (2, 17), 3.11, -4))
+
+
+# def new_list(*num):
+#     res = sum(num) / len(num)
+#     print(res)
+#     return [elem for elem in num if elem < res]
+#
+#
+# print(new_list(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(new_list(3, 6, 1, 9, 5))
+
+# def func(a, *args):
+#     return a, args
+#
+#
+# print(func(1))
+# print(func(1, 2, 3, 4, 5, 6, 7))
+
+
+# def print_score(student, *scores):
+#     print("Student Name:", student)
+#     for score in scores:
+#         print(score)
+#
+#
+# print_score("Irina", 5, 4, 3, 2, 5)
+# print_score("Igor", 5, 5, 4, 4, 5)
+# print_score("Lev")
+
+
+# def func(a, b, *args):
+#     return a, b, args
+#
+#
+# print(func(1, 8))
+# print(func(1, 2, 3, 4, 5, 6, 7))
+
+
+# def func(**kwargs):  # ** формирует словарь со значениями и ключами
+#     return kwargs
+#
+#
+# print(func(a=1, b=2, c=3))
+# print(func())
+# print(func(d=9))
+
+
+# def intro(**data):
+#     for k, v in data.items():
+#         print(k, "-", v)
+#     print()
+#
+#
+# intro(name='Irina', surname='Reznikova', age=22)
+# intro(name='Igor', surname='Berukov', email='igor@mail.ru', age=25, phone='+7909999-46-89')
+
+
+# def db(**kwargs):
+#     my_dict.update(kwargs)
+#     # print('внутри функции:', id(my_dict))
+#
+#
+# my_dict = {'one': 'first'}
+# # print(id(my_dict))
+# db(k1=22, k2=31, k3=11, k4=91)
+# db(name='Bob', age=31, weight=61, eyes_color='gray')
+# print(my_dict)
+
+
+# def func(a, b, *args, d, e, **kwargs):  # только в такой последовательности
+#     return a, b, args, e, kwargs, d
+#
+#
+# print(func(5, 1, 2, 3, 4, 4, 566, 6, e=100, k1=22, k2=31, k3=11, k4=91, d=55))
+
+
+# name = 'Tom'
+# print('глобальная область видимости: ', id(name))
+#
+#
+# def hi():
+#     global name
+#     name = "Sam"
+#     print('локальная область видимости: ', id(name))
+#     surname = "Jonson"
+#     print("Hello", name, surname)
+#
+#
+# def bye():
+#     print("Good bye", name)
+#
+#
+# print(name)
+# hi()
+# bye()
+# print(name)
+# print('глобальная область видимости внизу: ', id(name))
+
+
+# i = 5
+#
+#
+# def func(arg=i):
+#     print(arg)
+#
+#
+# i = 6
+# func()  # 5
+
+
+# x = 4  # х - глобальная область видимости
+#
+#
+# def add_five(a):
+#     x = 2  # х - объемлемая область видимости
+#
+#     def add_some():
+#         print("x =", x)
+#         return a + x  # а - локальная область видимости
+#
+#     return add_some()
+#
+#
+# print(add_five(5))
+
+
+# sum = 5
+#
+# lst = [9, 5, 8, 7, 6]
+# print(sum(lst))
+
+
+# import builtins
+#
+# name = dir(builtins)
+#
+# for t in name:
+#     print(t)
+
+
+# HomeWork
+a = int(input("Введите количество студентов: "))
+std = []
+bal = []
+for i in range(1, a + 1):
+    student_name = input(str(i) + "-й студент: ")
+    b = float(input("Балл: "))
+    std.append(student_name)
+    bal.append(b)
+res = sum(bal) / len(bal)
+print("Средний балл: ", res, ". Студенты с баллом выше среднего: ", sep='')
+c = {std: bal for std, bal in zip(std, bal)}
+for i in std:
+    if c[i] >= res:
+        print(i)
